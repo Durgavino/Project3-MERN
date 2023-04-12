@@ -1,0 +1,18 @@
+.homebackground{
+    height: 600px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+}
+.h1{
+    text-decoration: underline;
+    color: gold;
+}
+.text {
+    
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
