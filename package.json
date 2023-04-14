@@ -2,7 +2,7 @@
   "name": "project-3-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+   "main": "server/server.js",
   "scripts": {
     "start": "node server --ignore client",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
@@ -14,6 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-server-express": "^3.12.0",
+    "concurrently": "^7.0.0",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0"
   }
 }
