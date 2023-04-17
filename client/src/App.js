@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Sleepdata from "./pages/Sleepdata";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -56,6 +57,7 @@ function App() {
              
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
+              <Route path='/sleepdata' element={<Sleepdata/>}/>
             </Routes>
           </div>
           <Footer />

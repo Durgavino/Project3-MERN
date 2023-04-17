@@ -13,9 +13,7 @@ type Auth{
     user:User
 }
 type Query{
-    users:[User]!
-    user(userId:ID!):User
-    sleepinformation(userId:ID!):User
+   me:User
 }
 type Mutation{
     addUser(name:String!,email:String!,password:String!):Auth
@@ -35,3 +33,16 @@ input Sleepdata{
    }
 `;
 module.exports=typeDefs;
+
+
+
+
+// sleepinformation(userId:ID!):User
+
+// sleepinformation(Sleepdata:Sleepdata!):User
+
+
+// 15 type Query{
+//     users:[User]!
+//     user(userId:ID!):User
+//     sleepinfom:[Sleep]
