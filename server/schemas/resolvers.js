@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User,Sleep } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -9,6 +9,15 @@ const resolvers = {
         },
         user: async (parent, args) => {
             return User.findOne(args.id);
+        },
+        sleepinformation: async (parent,{userId}) => {
+            return User.findOne(userId)
+            .populate({
+                path:"Sleepdata",
+                populate:({
+                    path:"sleepDuration"
+                })
+            })
         },
     },
     Mutation: {
@@ -36,6 +45,23 @@ const resolvers = {
         removeUser: async (parent, { userID }) => {
             return User.findOneAndDelete({ _id: userID });
         },
+
+        sleepinfo:async(parent,{Sleepdata},context)=>{
+            //console.log(Sleepdata);
+            console.log(Sleepdata);
+            if(context.user){
+                const newuser=await User.findOneAndUpdate({
+                    _id:context.user._id 
+                },
+                {$addToSet:{ sleepinform:Sleepdata }},
+                {new:true,runValidators:true}
+                
+                
+                );
+                return newuser;
+            }
+            throw new AuthenticationError('You need to be logged in !');
+        }
     },
 
 
