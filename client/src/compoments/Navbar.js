@@ -20,6 +20,9 @@ function Navbar() {
           <li>
             <Link to="/signup">Sign Up</Link>
           </li>
+          <li>
+            <Link to="/donation">Donation</Link>
+          </li>
         </ul>
       </nav>
     </>

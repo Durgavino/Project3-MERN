@@ -1,0 +1,23 @@
+.donate-btn {
+    width: 180px;   
+    height: 30px;
+    border-radius: 10px;
+    background-color: gold;
+    color: black;
+    font-size: 22px;
+    border: 20px;
+    /* display: flex; */
+    text-align: center;
+    /* margin-left: 10px; */
+}
+
+.donate-logo {
+    width: 150px;
+}
+Donate-text {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin-left: 30px;
+    margin-right: 30px;
+}

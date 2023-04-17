@@ -5,6 +5,7 @@ import './styles/Navbar.css';
 import './styles/Login.css';
 import './styles/Home.css';
 import './styles/Signup.css';
+import './styles/Donation.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

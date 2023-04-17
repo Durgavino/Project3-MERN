@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
+import { Link  } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+// import {useNavigate} from "react-router-dom";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 //import Loginlogo from "../images/loginlogo.png";
 
 // function SignUp() {
@@ -69,22 +70,19 @@ import Auth from '../utils/auth';
 //   //     </div>
 //   //   </div>
 
-
-
-
-
 //   );
-
 
 // }
 
 // export default SignUp;
 
-const Signup=()=>{
+
+
+const Signup = () => {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    password: '',
+    name: "",
+    email: "",
+    password: "",
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -111,6 +109,7 @@ const Signup=()=>{
     }
   };
 
+  // let navigate = useNavigate();
 
   return (
     <main className="flex-row justify-center mb-4">
@@ -120,8 +119,8 @@ const Signup=()=>{
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success! You may now head{""}
+                <Link to="/donation">back to the donation page</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -133,6 +132,8 @@ const Signup=()=>{
                   value={formState.name}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -141,6 +142,8 @@ const Signup=()=>{
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
                 <input
                   className="form-input"
                   placeholder="******"
@@ -149,10 +152,13 @@ const Signup=()=>{
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
                 <button
                   className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                   type="submit"
+                  //  onClick={() => {navigate ("/donation")}}
                 >
                   Submit
                 </button>
@@ -172,5 +178,3 @@ const Signup=()=>{
 };
 
 export default Signup;
-
-
