@@ -19,7 +19,7 @@ type Mutation{
     addUser(name:String!,email:String!,password:String!):Auth
     login(email:String!,password:String!):Auth
     removeUser(userId:ID!):User
-    sleepinfo(bedTime:String!,wakeUpTime:wakeUpTime!):Sleep
+    sleepinfo(bedTime:String!,wakeUpTime:String!):Sleep
 }
 type Sleep{
     _id:ID!
@@ -31,9 +31,9 @@ type Query{
     Sleeps:[Sleep]!
 }
 input Sleepdata{
-    bedTime:Int
-    wakeUpTime:Int
-    sleepDuration:Int
+    bedTime:String!
+    wakeUpTime:String!
+    
    }
 `;
 module.exports=typeDefs;
