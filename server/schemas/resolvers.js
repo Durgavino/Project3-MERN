@@ -1,4 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
+const mongoose = require('mongoose');
 const { User, Sleep } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -33,7 +34,7 @@ const resolvers = {
                 const userData = await User.findOne({
                     _id: context.user._id
                 }).select('-__v -password')
-                    .populate("sleep");
+                    .populate({ path: 'Sleep' });
                 console.log(userData, "ME QUERY");
                 return userData;
             }
@@ -70,16 +71,18 @@ const resolvers = {
 
         sleepinfo: async (parent, { Sleepdata }, context) => {
             //console.log(Sleepdata);
-            console.log(Sleepdata);
+            //console.log(Sleepdata);
+            const newSleepdata = await Sleep.create(Sleepdata);
+            console.log(newSleepdata);
             if (context.user) {
+                console.log("hi")
                 const newuser = await User.findOneAndUpdate({
                     _id: context.user._id
                 },
-                    { $addToSet: { sleepinform: Sleepdata } },
+                    { $push: { Sleep: newSleepdata._id } },
                     { new: true, runValidators: true }
-
-
                 );
+                console.log(newuser);
                 return newuser;
             }
             throw new AuthenticationError('You need to be logged in !');

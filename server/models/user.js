@@ -24,7 +24,10 @@ const userSchema = new Schema({
         required: true,
         minlength: 5,
     },
-   // sleepdata: sleepSchema
+    Sleep:[{
+        type:Schema.Types.ObjectId,
+        ref:"Sleep"
+    }]
 }
 );
 

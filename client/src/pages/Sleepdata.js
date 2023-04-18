@@ -58,7 +58,7 @@ const Sleepdata = () => {
     event.preventDefault();
     const formData = { bedTime, wakeUpTime };
 
-    const response = await fetch('/api/sleepdata', {
+    const response = await fetch('/sleepdata', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ const Sleepdata = () => {
     });
     const data = await response.json();
     console.log(data);
-  }
+     }
   return (
     <div>
     <form onSubmit={handleSubmit}>

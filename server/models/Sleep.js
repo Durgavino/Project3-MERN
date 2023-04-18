@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-//const { Schema } = require('mongoose');
+const { Schema } = require('mongoose');
 
 const sleepSchema = new mongoose.Schema({
     user: [
         {
-            type: mongoose.Schema.Types.ObjectId,
+            type:Schema.Types.ObjectId,
             ref: "User"
         }
     ],
@@ -16,9 +16,7 @@ const sleepSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    // totalHour:{
-    //     type:Number,
-    // }
+    
 
 });
 sleepSchema.virtual("sleepDuration").get(function () {
