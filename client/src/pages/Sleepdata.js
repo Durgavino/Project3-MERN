@@ -56,14 +56,25 @@ const Sleepdata = () => {
   const [wakeUpTime, setwakeUpTime] = useState('');
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = { bedTime, wakeUpTime };
+   // const formData = { bedTime, wakeUpTime };
 
-    const response = await fetch('/sleepdata', {
+    const response = await fetch('http://localhost:3000/sleepdata', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({
+        query: `
+        mutation ($bedTime: Number!, $wakeUpTime: Number!) {
+          createSleepData(bedTime: $bedtime, wakeUpTime: $wakeUpTime) {
+            id
+            bedTime
+            wakeUpTime
+          }
+        }
+      `,
+      variables: { bedTime, wakeUpTime },
+      })
     });
     const data = await response.json();
     console.log(data);

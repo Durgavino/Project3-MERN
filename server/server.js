@@ -27,21 +27,21 @@ if (process.env.NODE_ENV === 'production') {
 
 
 
-app.post('/sleepdata', async (req, res) => {
-    try {
-        await dbconnect;
-        // const sleepcollection = dbconnect.db('sleepyhead2Pro').collection('sleepdata');
-        const sleepcollection = dbconnect.collection('sleepdata');
-        const result = await sleepcollection.insertOne(req.body);
-        res.send(result);
-    } catch (err) {
-        console.error(err);
-        res.status(500).send(err);
-    }
-    // finally {
-    //   await client.close();
-    // }
-});
+// app.post('/sleepdata', async (req, res) => {
+//     try {
+//         await dbconnect;
+//          const sleepcollection = dbconnect.db('sleepyhead2Pro').collection('sleepdata');
+//        // const sleepcollection = dbconnect.collection('sleepdata');
+//         const result = await sleepcollection.insertOne(req.body);
+//         res.send(result);
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).send(err);
+//     }
+//     // finally {
+//     //   await client.close();
+//     // }
+// });
 
 
 
