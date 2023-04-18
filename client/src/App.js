@@ -15,7 +15,11 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+<<<<<<< HEAD
 import Sleepdata from "./pages/Sleepdata";
+=======
+import Donation from './pages/Donation';
+>>>>>>> b763d0da4b2ebd19cff97e81fe25d9fe524e9e28
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -40,7 +44,7 @@ const client = new ApolloClient({
 });
 console.log(client);
 
-function App() {
+function App() {                                                                                          
   return (
     <ApolloProvider client={client}>
     <div className="App">
@@ -57,7 +61,11 @@ function App() {
              
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
+<<<<<<< HEAD
               <Route path='/sleepdata' element={<Sleepdata/>}/>
+=======
+              <Route path="/donation" element={<Donation />}/>
+>>>>>>> b763d0da4b2ebd19cff97e81fe25d9fe524e9e28
             </Routes>
           </div>
           <Footer />

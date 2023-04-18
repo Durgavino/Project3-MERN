@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
 }
 
@@ -63,8 +63,7 @@ body {
 }
 
 .passlogo {
-   /* padding-left: 70px;
-   font-size: 20px; */
+
    height: 50px;
     width: 40px;
     position: absolute;
@@ -100,7 +99,15 @@ body {
 
 .third-input {
     padding-top: 25px; 
+} */
+
+.flex-row {
+    height: 600px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
 }
+
 
 button{
     width: 100px;   
@@ -123,3 +130,18 @@ button{
 a {
     color: blue;
 } */
+
+
+.card-header {
+    
+    font-size: 25px;
+    
+}
+
+.form-input{
+    font-size: 20px;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 350px;
+
+}
