@@ -1,15 +1,11 @@
-<<<<<<< HEAD
+
 import React,{useState} from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-=======
-import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-import { useMutation } from "@apollo/client";
-import { LOGIN_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+
+
 //import Loginlogo from "../images/loginlogo.png";
 // import Email from "../images/email2.png";
 // import Password from "../images/passlogo.png";
@@ -48,8 +44,9 @@ import Auth from "../utils/auth";
 //       </div>
 //     </div>
 //   );
-//}
->>>>>>> b763d0da4b2ebd19cff97e81fe25d9fe524e9e28
+//
+
+
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
