@@ -40,6 +40,9 @@ const resolvers = {
             }
             throw new AuthenticationError('Not logged in')
         },
+        Sleeps:async()=>{
+            return await Sleep.find();
+        }
     },
 
 
@@ -69,23 +72,29 @@ const resolvers = {
             return User.findOneAndDelete({ _id: userID });
         },
 
-        sleepinfo: async (parent, { Sleepdata }, context) => {
-            //console.log(Sleepdata);
-            //console.log(Sleepdata);
-            const newSleepdata = await Sleep.create(Sleepdata);
-            console.log(newSleepdata);
-            if (context.user) {
-                console.log("hi")
-                const newuser = await User.findOneAndUpdate({
-                    _id: context.user._id
-                },
-                    { $push: { Sleep: newSleepdata._id } },
-                    { new: true, runValidators: true }
-                );
-                console.log(newuser);
-                return newuser;
-            }
-            throw new AuthenticationError('You need to be logged in !');
+        // sleepinfo: async (parent, { Sleepdata }, context) => {
+        //     //console.log(Sleepdata);
+        //     //console.log(Sleepdata);
+        //     const newSleepdata = await Sleep.create(Sleepdata);
+        //     console.log(newSleepdata);
+        //     if (context.user) {
+        //         console.log("hi")
+        //         const newuser = await User.findOneAndUpdate({
+        //             _id: context.user._id
+        //         },
+        //             { $push: { Sleep: newSleepdata._id } },
+        //             { new: true, runValidators: true }
+        //         );
+        //         console.log(newuser);
+        //         return newuser;
+        //     }
+        //     throw new AuthenticationError('You need to be logged in !');
+        // },
+
+        sleepinfo:async(_,{bedTime,wakeUpTime})=>{
+            const newbedTime=new Sleep({bedTime,wakeUpTime});
+            await newbedTime.save();
+            return newbedTime;
         }
     },
 
