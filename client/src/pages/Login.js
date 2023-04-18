@@ -51,10 +51,6 @@ import Auth from '../utils/auth';
 
 
 //import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -127,9 +123,11 @@ const Login = (props) => {
                   type="submit"
                 >
                   Submit
+                  
                 </button>
               </form>
             )}
+            
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
@@ -142,5 +140,6 @@ const Login = (props) => {
     </main>
   );
 };
+
 
 export default Login;

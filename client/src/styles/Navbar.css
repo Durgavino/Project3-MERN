@@ -18,6 +18,7 @@ body {
     width: 200px;
     height: 150px;
     margin: 5px;
+    
 }
 .nav li {
     font-size: 20px;
@@ -51,11 +52,12 @@ body {
 }
 
 .nav li:hover {
-    color: gold;
+    color: rgb(243, 226, 130);
     font-size: 20px;
 }
 
 .nav li:active {
-    background-color: rgb(248, 32, 32);
+    background-color: rgb(10, 10, 10);
     border: 50px;
+
 }

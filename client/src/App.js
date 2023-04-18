@@ -19,9 +19,6 @@ import SignUp from "./pages/SignUp";
 
 import Sleepdata from "./pages/Sleepdata";
 
-
-import Sleepdata from "./pages/Sleepdata";
-
 import Donation from './pages/Donation';
 
 
@@ -63,7 +60,8 @@ function App() {
               {/* Define routes to render different page components at different paths */}
               <Route path="/home" element={<Home />} />
              
-              <Route path="/login" element={<Login />} />
+              <Route exact path="/login" element={<Login />} />
+               
               <Route path="/signup" element={<SignUp />} />
 
               <Route path='/sleepdata' element={<Sleepdata/>}/>

@@ -6,13 +6,16 @@
 }
 .h1{
     text-decoration: underline;
-    color: gold;
+    color: rgb(243, 226, 130);
 }
 .text {
     
-    text-align: center;
+    text-align: justify;
+    width: 70%;
+    padding-left:360px;
     font-size: 20px;
     color: white;
     margin-left: 30px;
     margin-right: 30px;
+   
 }
