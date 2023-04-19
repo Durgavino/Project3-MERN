@@ -38,7 +38,7 @@ export const LOGIN_USER = gql`
 
 
 export const SLEEP_DATA=gql`
-mutation sleepinfo($bedTime:Number,$wakeUpTime:Number)
+mutation sleepinfo($bedTime:String!,$wakeUpTime:String!)
 {
   sleepinfo(bedTime:$bedTime,wakeUpTime:$wakeUpTime){
     bedTime

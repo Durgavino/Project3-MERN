@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import {useNavigate} from "react-router-dom";
+=======
+
+import React,{useState} from "react";
+
+// import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
+
+>>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
 
 //import Loginlogo from "../images/loginlogo.png";
 // import Email from "../images/email2.png";
@@ -43,8 +54,16 @@ import {useNavigate} from "react-router-dom";
 //       </div>
 //     </div>
 //   );
+<<<<<<< HEAD
 //}
+=======
+//
+>>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
 
+
+
+
+//import { Link } from 'react-router-dom';
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -124,9 +143,11 @@ const Login = (props) => {
                   }}
                 >
                   Submit
+                  
                 </button>
               </form>
             )}
+            
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
@@ -140,4 +161,9 @@ const Login = (props) => {
   );
 };
 
+<<<<<<< HEAD
 export default Login;
+=======
+
+export default Login;
+>>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b

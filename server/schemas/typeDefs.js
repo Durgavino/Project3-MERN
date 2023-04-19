@@ -19,17 +19,21 @@ type Mutation{
     addUser(name:String!,email:String!,password:String!):Auth
     login(email:String!,password:String!):Auth
     removeUser(userId:ID!):User
-    sleepinfo(Sleepdata:Sleepdata!):User
+    sleepinfo(bedTime:String!,wakeUpTime:String!):Sleep
 }
 type Sleep{
-    bedTime:Int
-    wakeUpTime:Int
-    sleepDuration:Int
+    _id:ID!
+    bedTime:String!
+    wakeUpTime:String!
+  
+}
+type Query{
+    Sleeps:[Sleep]!
 }
 input Sleepdata{
-    bedTime:Int
-    wakeUpTime:Int
-    sleepDuration:Int
+    bedTime:String!
+    wakeUpTime:String!
+    
    }
 `;
 module.exports=typeDefs;
@@ -46,3 +50,12 @@ module.exports=typeDefs;
 //     users:[User]!
 //     user(userId:ID!):User
 //     sleepinfom:[Sleep]
+
+
+// 24-28type Sleep{
+//     bedTime:Int
+//     wakeUpTime:Int
+//     sleepDuration:Int
+// }
+
+// 22    sleepinfo(Sleepdata:Sleepdata!):User
