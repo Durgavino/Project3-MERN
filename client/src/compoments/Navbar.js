@@ -23,6 +23,9 @@ function Navbar() {
           <li>
             <Link to="/donation">Donation</Link>
           </li>
+          <li>
+            <Link to="/clock">Clock</Link>
+          </li>
         </ul>
       </nav>
     </>

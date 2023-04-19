@@ -95,7 +95,7 @@ button{
     width: 100px;   
     height: 50px;
     border-radius: 10px;
-    background-color: gold;
+    background-color: rgb(243, 226, 130);
     color: black;
     font-size: 22px;
     border: 20px
@@ -110,7 +110,7 @@ button{
 }
 
 a {
-    color: blue;
+    color: rgb(185, 240, 237);
 }
 
 

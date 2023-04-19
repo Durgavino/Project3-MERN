@@ -15,8 +15,15 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+
+import Clock from './pages/Clock';
+
 import Sleepdata from "./pages/Sleepdata";
+<<<<<<< HEAD
 import Display from "./pages/Display"
+=======
+
+>>>>>>> 0dba635ba174064aab657272907987c24f76e7d4
 import Donation from './pages/Donation';
 
 
@@ -49,6 +56,7 @@ function App() {
       <div className="App">
 
         <Router>
+<<<<<<< HEAD
           <div className="flex-column justify-flex-start min-100-vh">
             <Navbar />
             <div className="container">
@@ -68,6 +76,31 @@ function App() {
               </Routes>
             </div>
             <Footer />
+=======
+        <div className="flex-column justify-flex-start min-100-vh">
+        <Navbar />
+          <div className="container">
+            <Routes>
+              {/* Define routes to render different page components at different paths */}
+              <Route path="/" element={<About />} />
+              {/* Define routes to render different page components at different paths */}
+              <Route path="/home" element={<Home />} />
+             
+              <Route exact path="/login" element={<Login />} />
+               
+              <Route path="/signup" element={<SignUp />} />
+
+
+              <Route path='/sleepdata' element={<Sleepdata/>}/>
+
+              <Route path="/donation" element={<Donation />}/>
+
+              {/* <Counter /> */}
+              <Route path="/clock" element={<Clock />}/>
+
+
+            </Routes>
+>>>>>>> 0dba635ba174064aab657272907987c24f76e7d4
           </div>
         </Router>
 
