@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const db = require('./config/connection');
+const dbconnect = require('./config/connection');
 const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas');
@@ -23,6 +23,26 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
+
+
+
+app.post('/sleepdata', async (req, res) => {
+    try {
+     
+      const sleepcollection = dbconnect.db('sleepyhead2Pro').collection('sleepyhead2Pro.users');
+      const result = await sleepcollection.insertOne(req.body);
+      res.send(result);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send(err);
+     } 
+   // finally {
+    //   await client.close();
+    // }
+  });
+
+
+
 // //Load the stage for our react app, since it is a single page
 // app.get('/', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../client/build/index.html'));
@@ -39,7 +59,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
     server.applyMiddleware({ app });
 
-    db.once('open', () => {
+    dbconnect.once('open', () => {
         app.listen(PORT, () => {
             console.log(`API server running on port ${PORT}!`);
             console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import {useNavigate} from "react-router-dom";
+
 //import Loginlogo from "../images/loginlogo.png";
 // import Email from "../images/email2.png";
 // import Password from "../images/passlogo.png";
@@ -76,6 +78,7 @@ const Login = (props) => {
     });
   };
 
+  let history = useNavigate();
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
@@ -85,7 +88,10 @@ const Login = (props) => {
             {data ? (
               <p>
                 Success! You may now head{" "}
-                {/* <Link to="/">back to the homepage.</Link> */}
+
+                <Link to="/better">Better</Link>
+               
+
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -113,6 +119,9 @@ const Login = (props) => {
                   className="btn btn-block btn-info"
                   style={{ cursor: "pointer" }}
                   type="submit"
+                  onClick={() => {
+                    history.push("/better");
+                  }}
                 >
                   Submit
                 </button>

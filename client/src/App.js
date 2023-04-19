@@ -16,6 +16,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Donation from './pages/Donation';
+import Better from './pages/Better';
+import Sleepdata from './pages/Sleepdata';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -58,6 +61,10 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/donation" element={<Donation />}/>
+              <Route path="/sleepdata" element={<Sleepdata />}/>
+              {/* <Route path="/better" element={<Better />}/> */}
+             
+
             </Routes>
           </div>
           <Footer />

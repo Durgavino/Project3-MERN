@@ -16,3 +16,32 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+
+.h3 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.videos {
+     display: flex;
+}
+.video1 {
+   
+    width: 560px;
+    height:315;
+}
+
+.video2 {
+    width: 560px;
+    height:315;
+}
+
+.video3 {
+    width: 560px;
+    height:315;
+}
+.video4 {
+    width: 560px;
+    height:315;
+}
