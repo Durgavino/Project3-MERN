@@ -9,10 +9,10 @@
     color: rgb(243, 226, 130);
 }
 .text {
-    
+    display: flex;
     text-align: justify;
-    width: 67%;
-    padding-left:320px;
+    width: 95%;
+    /* padding-left:320px; */
     font-size: 20px;
     color: white;
     margin-left: 30px;
