@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
+import Clock from './pages/Clock';
 
 import Sleepdata from "./pages/Sleepdata";
 
@@ -68,6 +69,9 @@ function App() {
               <Route path='/sleepdata' element={<Sleepdata/>}/>
 
               <Route path="/donation" element={<Donation />}/>
+
+              {/* <Counter /> */}
+              <Route path="/clock" element={<Clock />}/>
 
 
             </Routes>
