@@ -15,10 +15,9 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-
-
+import Clock from './pages/Clock';
 import Sleepdata from "./pages/Sleepdata";
-
+import Display from "./pages/Display"
 import Donation from './pages/Donation';
 
 
@@ -45,40 +44,43 @@ const client = new ApolloClient({
 });
 console.log(client);
 
-function App() {                                                                                          
+function App() {
   return (
     <ApolloProvider client={client}>
-    <div className="App">
+
+      <div className="App">
 
         <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-        <Navbar />
-          <div className="container">
-            <Routes>
-              {/* Define routes to render different page components at different paths */}
-              <Route path="/" element={<About />} />
-              {/* Define routes to render different page components at different paths */}
-              <Route path="/home" element={<Home />} />
-             
-              <Route exact path="/login" element={<Login />} />
-               
-              <Route path="/signup" element={<SignUp />} />
 
+          <div className="flex-column justify-flex-start min-100-vh">
+            <Navbar />
+            <div className="container">
+              <Routes>
+                {/* Define routes to render different page components at different paths */}
+                <Route path="/" element={<About />} />
+                {/* Define routes to render different page components at different paths */}
+                <Route path="/home" element={<Home />} />
 
-              <Route path='/sleepdata' element={<Sleepdata/>}/>
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
 
-              <Route path="/donation" element={<Donation />}/>
+                <Route path='/sleepdata' element={<Sleepdata />} />
+                <Route path='/sleepdisplay' element={<Display />} />
 
+                <Route path="/donation" element={<Donation />} />
+                <Route path="/clock" element={<Clock />} />
+              </Routes>
+            </div>
+            <Footer />
 
-            </Routes>
           </div>
-          <Footer />
-        </div>
-      </Router>
-     
+        </Router>
 
-    </div>
+
+      </div>
+
     </ApolloProvider>
+
   );
 }
 

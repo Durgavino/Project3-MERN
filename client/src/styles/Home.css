@@ -3,16 +3,29 @@
     padding-top: 20px;
     background-color: black;
     color: white;
+    
+    
 }
 .h1{
-    text-decoration: underline;
-    color: rgb(243, 226, 130);
+    display: flex;
+    text-decoration:underline;
+    color: rgb(243, 231, 125);
+    text-align: justify;
+    align-items: center;
+    padding-left:340px;
 }
 .text {
     display: flex;
+<<<<<<< HEAD
     text-align: justify;
     width: 95%;
     /* padding-left:320px; */
+=======
+    align-items: center;
+    text-align: justify;
+    width: 67%;
+    padding-left:300px;
+>>>>>>> cd23ae9d5d5d1f169b7a991353336929ab9cc4fc
     font-size: 20px;
     color: white;
     margin-left: 30px;
@@ -21,7 +34,7 @@
 
 .h3 {
     text-align: center;
-    color: white;
+    color: rgb(10, 123, 143);
     font-size: 20px;
 }
 

@@ -24,18 +24,6 @@ export const LOGIN_USER = gql`
   }
 `;
 
-// export const SLEEP_DATA=gql`
-// mutation sleepinfo($sleepdata: Sleepdata!) {
-//   sleepinfo(Sleepdata: $sleepdata) {
-//     sleepinfom {
-//       bedTime
-//       wakeUpTime
-//       sleepDuration
-//     }
-//   }
-// }
-// `;
-
 
 export const SLEEP_DATA=gql`
 mutation sleepinfo($bedTime:String!,$wakeUpTime:String!)

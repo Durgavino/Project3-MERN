@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMutation } from '@apollo/client';
 import {SLEEP_DATA} from "../utils/mutations";
+//import axios from 'axios';
 
 
 function SleepbedTime(){
@@ -13,7 +14,9 @@ function SleepbedTime(){
     sleepinfo({ variables: { bedTime, wakeUpTime } });
     setBedtime('');
     setWakeuptime('');
+
 };
+
 return (
   <form onSubmit={handleSubmit}>
    
@@ -25,10 +28,11 @@ return (
 
     <button type="submit">Submit</button>
   </form>
+
 );
 
-
 }
+
 
 
 export default SleepbedTime;

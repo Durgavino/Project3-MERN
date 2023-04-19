@@ -2,6 +2,8 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import Donate from "../images/donate-logo.png";
 
+//Donation Screen
+
 function Donation() {
   return (
     <div className="main-container">

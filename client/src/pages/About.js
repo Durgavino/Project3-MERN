@@ -1,5 +1,7 @@
 import React from 'react'
 
+//About Screen
+
 function About() {
   return (
     <div className="homebackground">

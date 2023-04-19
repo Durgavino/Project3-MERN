@@ -2,9 +2,6 @@
 const { Schema, model } = require('mongoose');
 const bycrpt = require('bcrypt');
 const sleepSchema = require("./Sleep");
-// const jwt=require('jsonwebtoken');
-// const joi=require('joi');
-// const passcomplex=require('joi-password-complexity');
 
 
 const userSchema = new Schema({
@@ -30,22 +27,6 @@ const userSchema = new Schema({
     }]
 }
 );
-
-// userSchema.methods.ispassword=function(){
-//     const token=jwt.sign({_id:this._id},process.env.JWTPRIVATEKEY,{expiresIn:"10d"})
-//     return token
-// };
-
-// const User=mongoose.model('user,userSchema');
-
-// const validate=(data)=>{
-//     const schema=joi.object({
-//         username:joi.string().required().label("username"),
-//         email:joi.string().required.label("email"),
-//         password:passcomplex().required.label("password")
-//     })
-// }
-
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
