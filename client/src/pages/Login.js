@@ -1,20 +1,12 @@
-<<<<<<< HEAD
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import {useNavigate} from "react-router-dom";
-=======
 
-import React,{useState} from "react";
 
-// import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
-
->>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
 
 //import Loginlogo from "../images/loginlogo.png";
 // import Email from "../images/email2.png";
@@ -54,12 +46,6 @@ import Auth from '../utils/auth';
 //       </div>
 //     </div>
 //   );
-<<<<<<< HEAD
-//}
-=======
-//
->>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
-
 
 
 
@@ -161,9 +147,5 @@ const Login = (props) => {
   );
 };
 
-<<<<<<< HEAD
-export default Login;
-=======
 
 export default Login;
->>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b

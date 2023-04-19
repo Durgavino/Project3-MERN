@@ -15,17 +15,11 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-<<<<<<< HEAD
-import Donation from './pages/Donation';
-import Better from './pages/Better';
-import Sleepdata from './pages/Sleepdata';
-=======
 
 
 import Sleepdata from "./pages/Sleepdata";
 
 import Donation from './pages/Donation';
->>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
 
 
 const httpLink = createHttpLink({
@@ -69,17 +63,12 @@ function App() {
               <Route exact path="/login" element={<Login />} />
                
               <Route path="/signup" element={<SignUp />} />
-<<<<<<< HEAD
-              <Route path="/donation" element={<Donation />}/>
-              <Route path="/sleepdata" element={<Sleepdata />}/>
-              {/* <Route path="/better" element={<Better />}/> */}
-             
-=======
+
 
               <Route path='/sleepdata' element={<Sleepdata/>}/>
 
               <Route path="/donation" element={<Donation />}/>
->>>>>>> e0a6a6225ea094ed6d8543bcbbd32b79ac05e61b
+
 
             </Routes>
           </div>
