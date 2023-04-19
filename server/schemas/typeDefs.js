@@ -40,22 +40,3 @@ module.exports=typeDefs;
 
 
 
-
-// sleepinformation(userId:ID!):User
-
-// sleepinformation(Sleepdata:Sleepdata!):User
-
-
-// 15 type Query{
-//     users:[User]!
-//     user(userId:ID!):User
-//     sleepinfom:[Sleep]
-
-
-// 24-28type Sleep{
-//     bedTime:Int
-//     wakeUpTime:Int
-//     sleepDuration:Int
-// }
-
-// 22    sleepinfo(Sleepdata:Sleepdata!):User

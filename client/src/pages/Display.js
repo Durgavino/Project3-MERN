@@ -4,13 +4,13 @@ import axios from 'axios';
 function Display() {
   const [sleepDisplay, setSleepData] = useState([]);
 
-//   const [bedTime, setBedtime] = useState('');
-//   const [wakeUpTime, setWakeuptime] = useState('');
+
   useEffect(() => {
     axios.get('/api/sleepdisplay')
       .then(response => {
         setSleepData(response.data);
       })
+      //Handle the error
       .catch(error => {
         console.log(error);
       });
