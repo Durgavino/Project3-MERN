@@ -1,3 +1,10 @@
+.main-container {
+    height: 500px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+}
+
 .donate-btn {
     width: 180px;   
     height: 30px;
@@ -6,18 +13,16 @@
     color: black;
     font-size: 22px;
     border: 20px;
-    /* display: flex; */
     text-align: center;
-    /* margin-left: 10px; */
 }
 
 .donate-logo {
-    width: 150px;
+    width: 200px;
 }
-Donate-text {
+.donate-text {
     text-align: center;
-    font-size: 50px;
-    color: black;
+    font-size: 20px;
+    color: white;
     margin-left: 30px;
     margin-right: 30px;
 }

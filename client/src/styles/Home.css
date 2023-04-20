@@ -1,10 +1,8 @@
 .homebackground{
-    height: 600px;
+    height: 500px;
     padding-top: 20px;
     background-color: black;
     color: white;
-    
-    
 }
 .h1{
     display: flex;
@@ -16,41 +14,42 @@
 }
 .text {
     display: flex;
-    align-items: center;
-    text-align: justify;
-    width: 67%;
-    padding-left:300px;
-    font-size: 20px;
+    /* align-items: center;
+    text-align: justify; */
+    text-align: center;
+    width: 90%;
+    padding-left:150px;
+
+    font-size: 22px;
     color: white;
-    margin-left: 30px;
-    margin-right: 30px;
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
 }
 
 .h3 {
     text-align: center;
     color: rgb(10, 123, 143);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .videos {
      display: flex;
 }
 .video1 {
-   
     width: 560px;
-    height:315;
+    height:315px;
 }
 
 .video2 {
     width: 560px;
-    height:315;
+    height:315px;
 }
 
 .video3 {
     width: 560px;
-    height:315;
+    height:315px;
 }
 .video4 {
     width: 560px;
-    height:315;
+    height:315px;
 }

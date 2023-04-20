@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { useState } from "react";
+=======
+import React from "react";
+>>>>>>> b596b6ccee6a64cc1e8ff26b461764652bcf4684
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 import Navbar from "./compoments/Navbar";
 import Footer from "./compoments/Footer";
 import "./App.css";
@@ -16,24 +20,23 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Clock from './pages/Clock';
+import Clock from "./pages/Clock";
 import Sleepdata from "./pages/Sleepdata";
-import Display from "./pages/Display"
-import Donation from './pages/Donation';
-
+import Display from "./pages/Display";
+import Donation from "./pages/Donation";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -49,12 +52,13 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-
       <div className="App">
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b596b6ccee6a64cc1e8ff26b461764652bcf4684
         <Router>
-
           <div className="flex-column justify-flex-start min-100-vh">
             <Navbar />
             <div className="container">
@@ -67,23 +71,18 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
 
-                <Route path='/sleepdata' element={<Sleepdata />} />
-                <Route path='/sleepdisplay' element={<Display />} />
+                <Route path="/sleepdata" element={<Sleepdata />} />
+                <Route path="/sleepdisplay" element={<Display />} />
 
                 <Route path="/donation" element={<Donation />} />
                 <Route path="/clock" element={<Clock />} />
               </Routes>
             </div>
             <Footer />
-
           </div>
         </Router>
-
-
       </div>
-
     </ApolloProvider>
-
   );
 }
 
