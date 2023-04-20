@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
 import React from 'react';
-import { useState } from "react";
-=======
-import React from "react";
->>>>>>> b596b6ccee6a64cc1e8ff26b461764652bcf4684
+
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -53,11 +49,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-<<<<<<< HEAD
 
 
-=======
->>>>>>> b596b6ccee6a64cc1e8ff26b461764652bcf4684
         <Router>
           <div className="flex-column justify-flex-start min-100-vh">
             <Navbar />
