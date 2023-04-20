@@ -23,8 +23,6 @@ function Home() {
           <div className="videos">
             <div className="video1">
               <iframe
-                // width="100%"
-                // height="100%"
                 src="https://www.youtube.com/embed/h287bt6jSjA"
                 title="YouTube video player"
                 frameborder="0"
@@ -34,8 +32,6 @@ function Home() {
             </div>
             <div className="video2">
               <iframe
-                // width="560"
-                // height="315"
                 src="https://www.youtube.com/embed/lMgqiA3zKdw"
                 title="YouTube video player"
                 frameborder="0"
@@ -45,8 +41,6 @@ function Home() {
             </div>
             <div className="video3">
               <iframe
-                // width="560"
-                // height="315"
                 src="https://www.youtube.com/embed/xzfpEqRQ-lY"
                 title="YouTube video player"
                 frameborder="0"
@@ -56,8 +50,6 @@ function Home() {
             </div>
             <div className="video4">
               <iframe
-                // width="560"
-                // height="315"
                 src="https://www.youtube.com/embed/IAJQPI-Uvpg"
                 title="YouTube video player"
                 frameborder="0"

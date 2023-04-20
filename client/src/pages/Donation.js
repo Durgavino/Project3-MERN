@@ -8,10 +8,10 @@ function Donation() {
   return (
     <div className="main-container">
       <div>
-        <p className="Donate-text">
+        <p className="donate-text">
           Sleephead Project3 - Sleep Better Feel Better. Your donations will
           keep us to upload more futuristic contents. Therefore, we seek for
-          your contribution.
+          your financial contribution.
         </p>
       </div>
       <br />
@@ -19,12 +19,12 @@ function Donation() {
       <div>
         <a
           href="https://donate.stripe.com/test_9AQcQr914gtZ73G288"
-          // target="_blank"
-          // rel="noopener noreferrer"
         >
           <button className="donate-btn">Click to Donate</button>
         </a>
       </div>
+      <br />
+      <br />
       <div>
         <img className="donate-logo" src={Donate} alt="donate" />
       </div>

@@ -1,55 +1,10 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-
-
-//import Loginlogo from "../images/loginlogo.png";
-// import Email from "../images/email2.png";
-// import Password from "../images/passlogo.png";
-
-// function Login() {
-//   return (
-//     <div className="main-container">
-//       <div className="sub-main">
-//         <div>
-//           <div className="imgs">
-//             <div className="container-logo">
-//               <img className="loginlogo" src={Loginlogo} alt="loginlogo" />
-//             </div>
-//           </div>
-//           <div>
-//             <h1>Login Page</h1>
-
-//             <div className="first-input">
-//               {/* <img className="email" src={Email} alt="Email" /> */}
-//               <input className="usename" type="text" placeholder="User Name" />
-//             </div>
-//             <div className="second-input">
-//               {/* <img className="passlogo" src={Password} alt="passlogo" /> */}
-//               <input className="loginpwd" type="text" placeholder="Password" />
-//             </div>
-//             <div className="login-button">
-//               <button>Login</button>
-//             </div>
-
-//               <p className="link">
-//                 <a href="/#">Forgot Password ?</a> or <a href="/#">Sign Up</a>
-//               </p>
-
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-
-
-
-//import { Link } from 'react-router-dom';
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -92,11 +47,7 @@ const Login = (props) => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{" "}
-
-                <Link to="/better">Better</Link>
-               
-
+                Success! You may now head <Link to="/better">Better</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -129,11 +80,9 @@ const Login = (props) => {
                   }}
                 >
                   Submit
-                  
                 </button>
               </form>
             )}
-            
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
@@ -146,6 +95,5 @@ const Login = (props) => {
     </main>
   );
 };
-
 
 export default Login;
