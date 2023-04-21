@@ -13,9 +13,17 @@ Install the required packages using command npm i and run the command npm run de
 Instructors, Tutors
 
 ## License
-MIT
 
 None
+
+## Collaborators
+
+Durga Devi Baskaran
+
+Talabi Bamidele
+
+Jayasree Yuvraj
+
 
 ## Deployed URL
 https://fierce-crag-18868.herokuapp.com/
